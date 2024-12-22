@@ -16,7 +16,7 @@
         background-color: #ffffff;
         color: #000000;
         transition: background-color 0.3s ease, color 0.3s ease;
-        position: relative; /* Added to enable absolute positioning of the toggle button */
+        position: relative;
     }
 
     body.dark-mode {
@@ -138,10 +138,10 @@
 
     /* Toggle Button */
     #toggle-button {
-        font-family: 'Orbitron', sans-serif; /* Or your chosen font */
+        font-family: 'Orbitron', sans-serif;
         position: absolute;
-        top: 20px; 
-        right: 20px; 
+        top: 20px;
+        right: 20px;
         padding: 10px 20px;
         background-color: #f0f0f0;
         color: #333;
@@ -152,17 +152,17 @@
         transition: background-color 0.3s, color 0.3s;
     }
 
-    .toggle-button:hover {
+    #toggle-button:hover {
         background-color: #ddd;
     }
 
-    body.dark-mode .toggle-button {
+    body.dark-mode #toggle-button {
         background-color: #333;
         color: #f0f0f0;
         border-color: #444;
     }
 
-    body.dark-mode .toggle-button:hover {
+    body.dark-mode #toggle-button:hover {
         background-color: #555;
     }
 
@@ -177,30 +177,32 @@
     }
 
     .button:hover {
-        background-color: #ffffff; /* Lighter background on hover */
-        color: #000000; /* Ensure text is dark on hover */
+        background-color: #ffffff;
+        color: #000000;
         text-decoration: underline;
     }
 
     body.dark-mode .button {
         background-color: #444;
         color: #e0e0e0;
+        border-color: #555555;
     }
 
     body.light-mode .button {
         background-color: #f0f0f0;
         color: #333;
+        border-color: #ccc;
     }
 
     /* Button hover styles for both modes */
     body.dark-mode .button:hover {
-        background-color: #555; /* Light background in dark mode on hover */
-        color: #ffffff; /* Keep text white in dark mode */
+        background-color: #555;
+        color: #ffffff;
     }
 
     body.light-mode .button:hover {
-        background-color: #000000;
-        color: #ffffff; /* Ensure text stays white in light mode */
+        background-color: #f0f0f0 ;
+        color: #f0f0f0 ;
     }
 </style>
 
@@ -296,19 +298,12 @@
     </section>
 </main>
 
-<footer>
-        <p>&copy; 2024 GTA San Andreas Stories. All rights reserved.</p>
-</footer>
-
-
-    </main>
-
     <footer>
         <p>&copy; 2024 GTA San Andreas Stories. All rights reserved.</p>
     </footer>
 
     <!-- Toggle Button -->
-    <button id="toggle-button">Toggle Dark/Light Mode</button>
+    <button id="toggle-button" onclick="toggleMode()">Toggle Dark/Light Mode</button>
 
     <script>
         "use strict";
@@ -329,30 +324,13 @@
             }
         }
 
-        // Apply saved or default mode
-        function applyInitialMode() {
-            let savedMode;
-            try {
-                savedMode = localStorage.getItem('mode');
-            } catch (e) {
-                console.warn("LocalStorage not available.", e);
-            }
-
+        // Apply saved or initial mode
+        window.onload = function() {
+            const savedMode = localStorage.getItem('mode');
             if (savedMode) {
                 document.body.classList.add(savedMode);
-            } else {
-                const currentHour = new Date().getHours();
-                const defaultMode = currentHour >= 12 ? 'dark-mode' : 'light-mode';
-                document.body.classList.add(defaultMode);
             }
-        }
-
-        // Add event listener to the toggle button
-        const toggleButton = document.getElementById('toggle-button');
-        toggleButton.addEventListener('click', toggleMode);
-
-        // Apply mode on page load
-        applyInitialMode();
+        };
     </script>
 </body>
 </html>
