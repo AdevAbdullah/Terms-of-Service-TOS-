@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Arial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Icon">
+<style>
+    /* General Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        background-color: #ffffff;
+        color: #000000;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        position: relative; /* Added to enable absolute positioning of the toggle button */
+    }
+
+    body.dark-mode {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    /* Header Styles */
+    header {
+        background: #000000;
+        color: #ffffff;
+        text-align: center;
+        padding: 40px 20px;
+        border-bottom: 4px solid #000000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto 20px;
+        height: 350px;
+    }
+
+    h1 {
+        font-family: 'Orbitron', sans-serif;
+        font-weight: 700;
+        margin-top: 0;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background-color: #ffffff;
+        padding: 10px 0;
+        text-align: center;
+        border-bottom: 3px solid #000000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: sticky;
+        top: 0;
+    }
+
+    body.dark-mode nav {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+    }
+
+    nav a {
+        color: #000000;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        border-radius: 4px;
+        margin: 0 10px;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: transform 0.3s, color 0.3s;
+    }
+
+    body.dark-mode nav a {
+        color: #e0e0e0;
+    }
+
+    nav a:hover {
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: underline;
+        transform: scale(1.1);
+    }
+
+    /* Content Styles */
+    .content {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    body.dark-mode .content {
+        background-color: #2a2a2a;
+        border-color: #555555;
+        color: #e0e0e0;
+    }
+
+    h2 {
+        font-family: 'Orbitron', sans-serif;
+        margin-bottom: 15px;
+        font-weight: 700;
+        color: #000000;
+        text-decoration: underline;
+    }
+
+    body.dark-mode h2 {
+        color: #e0e0e0;
+    }
+
+    p {
+        font-size: 1.2em;
+        line-height: 1.6;
+    }
+
+    /* Footer Styles */
+    footer {
+        background-color: #f2f2f2;
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+        border-top: 3px solid #000000;
+    }
+
+    body.dark-mode footer {
+        background-color: #1a1a1a;
+        color: #e0e0e0;
+        border-top: 3px solid #555555;
+    }
+
+    /* Toggle Button */
+    #toggle-button {
+        font-family: 'Orbitron', sans-serif; /* Or your chosen font */
+        position: absolute;
+        top: 20px; 
+        right: 20px; 
+        padding: 10px 20px;
+        background-color: #f0f0f0;
+        color: #333;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1em;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .toggle-button:hover {
+        background-color: #ddd;
+    }
+
+    body.dark-mode .toggle-button {
+        background-color: #333;
+        color: #f0f0f0;
+        border-color: #444;
+    }
+
+    body.dark-mode .toggle-button:hover {
+        background-color: #555;
+    }
+
+    /* Button Styles */
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #ffffff; /* Lighter background on hover */
+        color: #000000; /* Ensure text is dark on hover */
+        text-decoration: underline;
+    }
+
+    body.dark-mode .button {
+        background-color: #444;
+        color: #e0e0e0;
+    }
+
+    body.light-mode .button {
+        background-color: #f0f0f0;
+        color: #333;
+    }
+
+    /* Button hover styles for both modes */
+    body.dark-mode .button:hover {
+        background-color: #555; /* Light background in dark mode on hover */
+        color: #ffffff; /* Keep text white in dark mode */
+    }
+
+    body.light-mode .button:hover {
+        background-color: #000000;
+        color: #ffffff; /* Ensure text stays white in light mode */
+    }
+</style>
+
+</head>
+<body class="light-mode">
+    <header>
+        <img src="https://raw.githubusercontent.com/AdevAbdullah/Mod-website/main/lenchmobnigga.png" alt="GTA San Andreas Stories Logo">
+        <h1><i class="fas fa-file-alt icon"></i> Terms of Service</h1>
+        <nav>
+            <a href="https://gtasastories.netlify.app/">
+                <i class="fas fa-home icon"></i> Home
+            </a>
+            <a href="#">
+                <i class="fas fa-scroll icon"></i> Terms of Service
+            </a>
+        </nav>
+    </header>
+
+<main class="content">
+    <section id="welcome">
+        <h2><i class="fas fa-handshake icon"></i> Welcome</h2>
+        <p>Welcome to GTA: San Andreas Stories (GTA SAS), a fan-made project designed solely for entertainment purposes. By using, modifying, or distributing content from this project, you agree to the following terms.</p>
+    </section>
+
+    <section id="fan-made-product">
+        <h2><i class="fas fa-gamepad icon"></i> Fan-Made Product</h2>
+        <p>GTA SAS is an unofficial project created by fans of the Grand Theft Auto series. It is not affiliated with, endorsed by, or associated with Rockstar Games or its parent companies.</p>
+    </section>
+
+    <section id="open-source">
+        <h2><i class="fas fa-code icon"></i> Open Source</h2>
+        <p>The content of GTA SAS is open-source, meaning it is freely available for modification and redistribution. However, proper credit must always be given to the original creators of the content. This is a fundamental condition of use.</p>
+    </section>
+
+    <section id="non-commercial-use">
+        <h2><i class="fas fa-dollar-sign icon"></i> Non-Commercial Use</h2>
+        <p>GTA SAS is strictly for non-commercial purposes. You may not use, modify, or distribute the content, in whole or in part, for financial gain or as part of any commercial product, service, or enterprise. This includes but is not limited to selling, licensing, or using the mod in any way that generates revenue or supports a commercial venture. Any use of this project that conflicts with the non-commercial intent, such as incorporating it into paid content or using it in commercial advertising, is strictly prohibited.</p>
+    </section>
+
+    <section id="attribution">
+        <h2><i class="fas fa-clipboard icon"></i> Attribution</h2>
+        <p>Any redistribution, reuse, or modification of the GTA SAS content must include clear and visible attribution to the original creators. This ensures proper acknowledgment of the effort and creativity that went into the project.</p>
+    </section>
+
+    <section id="license-agreement">
+        <h2><i class="fas fa-file-signature icon"></i> License Agreement</h2>
+        <p>By using this project, you agree to abide by the terms outlined here. The creators retain all rights to their work, and any modifications or derivative works must comply with these terms. The license grants permission to use the content but does not transfer ownership of the original work to the user.</p>
+    </section>
+
+    <section id="usage-restrictions">
+        <h2><i class="fas fa-ban icon"></i> Usage Restrictions</h2>
+        <p>This project may not be used in any way that violates local laws or regulations. Any misuse of the project, including attempts to misrepresent it as an official product, is strictly prohibited.</p>
+    </section>
+
+    <section id="no-responsibility-for-derivatives">
+        <h2><i class="fas fa-exclamation-triangle icon"></i> No Responsibility for Derivative Works</h2>
+        <p>The creators of GTA SAS are not responsible for any modifications or derivative works created by third parties. Any such works are the responsibility of their respective creators.</p>
+    </section>
+
+    <section id="acceptance-of-terms">
+        <h2><i class="fas fa-check-circle icon"></i> Acceptance of Terms</h2>
+        <p>Your use of GTA SAS constitutes acceptance of these terms. If you do not agree with any part of these terms, you must not use, modify, or distribute this content.</p>
+    </section>
+
+    <section id="disclaimer">
+        <h2><i class="fas fa-exclamation-circle icon"></i> Disclaimer</h2>
+        <p>GTA SAS is provided "as is" without any guarantees or warranties. The creators are not liable for any issues or damages arising from the use, modification, or distribution of the project.</p>
+    </section>
+
+    <section id="entertainment-only">
+        <h2><i class="fas fa-fun icon"></i> Entertainment Only</h2>
+        <p>GTA SAS is a project created for fun and entertainment. It is not intended to replace or compete with official Grand Theft Auto products.</p>
+    </section>
+
+    <section id="legal-considerations">
+        <h2><i class="fas fa-gavel icon"></i> Legal Considerations</h2>
+        <p>This agreement does not override any laws or regulations that may apply to you. If any clause of this agreement is found to be invalid under local law, the rest of the agreement remains in effect.</p>
+    </section>
+
+    <section id="limitation-of-liability">
+        <h2><i class="fas fa-ban icon"></i> Limitation of Liability</h2>
+        <p>The creators of GTA SAS shall not be held liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the project. This includes, but is not limited to, loss of data or damage to your system.</p>
+    </section>
+
+    <section id="distribution-rights">
+        <h2><i class="fas fa-share-alt icon"></i> Distribution Rights</h2>
+        <p>You may distribute GTA SAS or make it available for distribution via the internet or other mediums, provided that this Terms of Service document is included without alterations. Any distribution must comply with the attribution and non-commercial use clauses.</p>
+    </section>
+
+    <section id="modification-of-terms">
+        <h2><i class="fas fa-sync icon"></i> Modification of Terms</h2>
+        <p>The terms of this agreement may be updated or modified at any time. It is your responsibility to review the latest version of this agreement before using or distributing GTA SAS.</p>
+    </section>
+</main>
+
+<footer>
+        <p>&copy; 2024 GTA San Andreas Stories. All rights reserved.</p>
+</footer>
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 GTA San Andreas Stories. All rights reserved.</p>
+    </footer>
+
+    <!-- Toggle Button -->
+    <button id="toggle-button">Toggle Dark/Light Mode</button>
+
+    <script>
+        "use strict";
+
+        // Toggle between light and dark mode securely
+        function toggleMode() {
+            const body = document.body;
+            const isLightMode = body.classList.contains('light-mode');
+            const newMode = isLightMode ? 'dark-mode' : 'light-mode';
+
+            body.classList.remove(isLightMode ? 'light-mode' : 'dark-mode');
+            body.classList.add(newMode);
+
+            try {
+                localStorage.setItem('mode', newMode);
+            } catch (e) {
+                console.error("LocalStorage is blocked or not available.", e);
+            }
+        }
+
+        // Apply saved or default mode
+        function applyInitialMode() {
+            let savedMode;
+            try {
+                savedMode = localStorage.getItem('mode');
+            } catch (e) {
+                console.warn("LocalStorage not available.", e);
+            }
+
+            if (savedMode) {
+                document.body.classList.add(savedMode);
+            } else {
+                const currentHour = new Date().getHours();
+                const defaultMode = currentHour >= 12 ? 'dark-mode' : 'light-mode';
+                document.body.classList.add(defaultMode);
+            }
+        }
+
+        // Add event listener to the toggle button
+        const toggleButton = document.getElementById('toggle-button');
+        toggleButton.addEventListener('click', toggleMode);
+
+        // Apply mode on page load
+        applyInitialMode();
+    </script>
+</body>
+</html>
